@@ -1,0 +1,224 @@
+    1  groups
+    2  groupdel docker
+    3  exit
+    4  groups
+    5  sudo usermod -aG docker dockeradmin
+    6  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+    7  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    8  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+    9  apt-cache policy docker-ce
+   10  sudo apt install docker-ce
+   11  sudo systemctl status docker
+   12  groupadd docker
+   13  exit
+   14  ll
+   15  cd hello-docker/
+   16  ll
+   17  touch app.js
+   18  touch Dockerfile
+   19  nano app.js
+   20  nano Dockerfile
+   21  clear
+   22  docker built -t hello-docker .
+   23  docker build .
+   24  sudo chmod 666 /var/run/docker.sock
+   25  docker build .
+   26  docker image ls
+   27  docker run
+   28  docker run hello-docker
+   29  docker run 8231ac4ba49f
+   30  docker ps -a
+   31  docker ps
+   32  clear
+   33  apt
+   34  apt autoremove
+   35  exit
+   36  ls
+   37  cd /opt
+   38  ls
+   39  cd /home/
+   40  ls
+   41  cd dockeradmin/
+   42  ls
+   43  mkdir youtube-app
+   44  ls
+   45  cd youtube-app/
+   46  ls
+   47  git clone https://github.com/rodgtr1/youtube-stats.git
+   48  ll
+   49  cd youtube-stats/
+   50  ll
+   51  cd ..
+   52  ll
+   53  mv youtube-stats/
+   54  cd ..
+   55  pwd
+   56  cd youtube-app/
+   57  mv youtube-stats /home/dockeradmin/
+   58  ll
+   59  cd ..
+   60  ll
+   61  rm -rf youtube-app/
+   62  ll
+   63  clear
+   64  ls
+   65  cd youtube-stats/
+   66  ls
+   67  docker build .
+   68  docker run 1a5af4b9aa25
+   69  cd
+   70  ls
+   71  docker run --rm -it -p 3000:3000/tcp youtube-stats
+   72  docker run --rm -it -p 3000:3000/tcp 1a5af4b9aa25
+   73  export NODE_OPTIONS=--openssl-legacy-provider
+   74  cd youtube-stats/
+   75  export NODE_OPTIONS=--openssl-legacy-provider
+   76  docker run --rm -it -p 3000:3000/tcp 1a5af4b9aa25
+   77  ls
+   78  cd ..
+   79  ls
+   80  cd dockeradmin/
+   81  ls
+   82  git clone git@gitlab.com:nanuchi/techworld-js-docker-demo-app.git
+   83  git clone https://gitlab.com/nanuchi/techworld-js-docker-demo-app.git
+   84  ls
+   85  cd techworld-js-docker-demo-app/
+   86  ls
+   87  cd ..
+   88  ls
+   89  docker pull mongo
+   90  docker ps
+   91  docker ps-a
+   92  docker ps -a
+   93  docker images
+   94  docker network ls
+   95  docker network create mongo-network
+   96  docker run mongo
+   97  docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e  MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo
+   98  docker run -d  -p 27017:27017-e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo
+   99  cd /var/lib/docker
+  100  sudo cd /var/lib/docker
+  101  exi
+  102  exit
+  103  ls -la /var/lib/docker
+  104  sudo ls -la /var/lib/docker
+  105  cd
+  106  ls
+  107  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 085781150237.dkr.ecr.us-east-1.amazonaws.com
+  108  sudo apt  install awscli
+  109  sudo snap install aws-cli
+  110  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 085781150237.dkr.ecr.us-east-1.amazonaws.com
+  111  aws configure
+  112  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 085781150237.dkr.ecr.us-east-1.amazonaws.com
+  113  docker build -t my-docker-repo .
+  114  ls
+  115  cd hello-docker/
+  116  docker build -t my-docker-repo .
+  117  docker tag my-docker-repo:latest 085781150237.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo:latest
+  118  docker push 085781150237.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo:latest
+  119  ls
+  120  cd ..
+  121  ls
+  122  cd dockeradmin/
+  123  ls
+  124  rm techworld-js-docker-demo-app/ docker-js-app
+  125  mv techworld-js-docker-demo-app/ docker-js-app
+  126  ls
+  127  cd youtube-stats/
+  128  ls
+  129  cat Dockerfile
+  130  ls
+  131  docker build .
+  132  docker run 1a5af4b9aa25
+  133  docker run 1a5af4b9aa25 --ip
+  134  docker run --ip
+  135  docker run --name mynginx1 -p 80:80 -d nginx
+  136  docker images
+  137  docker run 12766a6745ee
+  138  docker ps
+  139  docker stop mongodb
+  140  docker ps
+  141  docker stop nginx
+  142  docker stop nginx1
+  143  docker run 12766a6745ee
+  144  docker run --name mynginx1 -p 80:80 -d nginx
+  145  docker run --name mynginx1 -p 3000:80 -d nginx
+  146  docker stop  mynginx1
+  147  docker ps
+  148  docker run --name mynginx1 -p 3000:80 -d nginx
+  149  docker stop -t mynginx1
+  150  docker stop
+  151  docker stop -t mynginx1docker ps
+  152  docker ps
+  153  docker ps -a
+  154  docker stop f23fbfd9e5e8
+  155  docker ps
+  156  docker run --name mynginx1 -p 3000:80 -d nginx
+  157  docker run --name mynginx2 -p 3000:80 -d nginx
+  158  docker restart mynginx2
+  159  docker images
+  160  docker run .
+  161  docker run --help[
+  162  docker run --help
+  163  docker images
+  164  docker run -d 1a5af4b9aa25
+  165  docker run 1a5af4b9aa25
+  166  cat docker-compose.yaml
+  167  mkdir -p auth data
+  168  auth/nginx.conf
+  169  cd auth
+  170  ls
+  171  nano nginx.conf
+  172  nano auth/nginx.htpasswd
+  173  ls
+  174  cd ..
+  175  nano auth/nginx.htpasswd
+  176  cp domain.crt auth
+  177  ls
+  178  cd ..
+  179  docker images
+  180  docker image rm *
+  181  docker image rm .
+  182  docker image rm 1a5af4b9aa25
+  183  docker image rm 1a5af4b9aa25 -f
+  184  docker images
+  185  docker image rm 8231ac4ba49f -f
+  186  docker image rm b21ad2afe409 -f
+  187  docker image rm 2e200967d166 -f
+  188  docker image rm dca41997cda4 -f
+  189  docker image rm 20c0a0be5115 -f
+  190  docker image rm 12766a6745ee -f
+  191  docker stop 12766a6745ee
+  192  docker stop f1285184ce12
+  193  docker image rm 12766a6745ee -f
+  194  docker images
+  195  docker container ls
+  196  clear
+  197  sudo service docker start
+  198  sudo service docker status
+  199  sudo usermod -a -G docker dockeradmin
+  200  sudo usermod -a -G dockeradmin dockeradmin
+  201  sudo usermod -a -G docker dockeradmin
+  202  docker info
+  203  ls
+  204  cd youtube-stats/
+  205  ls
+  206  pwd
+  207  nano Dockerfile
+  208  docker build . -t youtubereactapp
+  209  docker run --rm -it -p 80:3000/tcp youtubereactapp:latest
+  210  docker run --rm -it -p 3000:3000/tcp youtubereactapp:latest
+  211  ls
+  212  nano Dockerfile
+  213  docker build . -t youtubereactapp
+  214  docker run --rm -it -p 3000:3000/tcp youtubereactapp:latest
+  215  docker run --rm -it -p 80:3000/tcp youtubereactapp:latest
+  216  curl http://localhost:3000
+  217  docker run -d -p 80:80 --name nginx nginx
+  218  docker run --rm -it -p 80:3000/tcp youtubereactapp:latest
+  219  docker run --rm -it -p 3000:3000/tcp youtubereactapp:latest
+  220  cd
+  221  ls
+  222  cd youtube-stats/
+  223  ls
+  224  history > history_yt-app

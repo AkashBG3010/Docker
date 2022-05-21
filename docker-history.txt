@@ -1,0 +1,791 @@
+    1  groups
+    2  groupdel docker
+    3  exit
+    4  groups
+    5  sudo usermod -aG docker dockeradmin
+    6  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+    7  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    8  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+    9  apt-cache policy docker-ce
+   10  sudo apt install docker-ce
+   11  sudo systemctl status docker
+   12  groupadd docker
+   13  exit
+   14  ll
+   15  cd hello-docker/
+   16  ll
+   17  touch app.js
+   18  touch Dockerfile
+   19  nano app.js
+   20  nano Dockerfile
+   21  clear
+   22  docker built -t hello-docker .
+   23  docker build .
+   24  sudo chmod 666 /var/run/docker.sock
+   25  docker build .
+   26  docker image ls
+   27  docker run
+   28  docker run hello-docker
+   29  docker run 8231ac4ba49f
+   30  docker ps -a
+   31  docker ps
+   32  clear
+   33  apt
+   34  apt autoremove
+   35  exit
+   36  ls
+   37  cd /opt
+   38  ls
+   39  cd /home/
+   40  ls
+   41  cd dockeradmin/
+   42  ls
+   43  mkdir youtube-app
+   44  ls
+   45  cd youtube-app/
+   46  ls
+   47  git clone https://github.com/rodgtr1/youtube-stats.git
+   48  ll
+   49  cd youtube-stats/
+   50  ll
+   51  cd ..
+   52  ll
+   53  mv youtube-stats/
+   54  cd ..
+   55  pwd
+   56  cd youtube-app/
+   57  mv youtube-stats /home/dockeradmin/
+   58  ll
+   59  cd ..
+   60  ll
+   61  rm -rf youtube-app/
+   62  ll
+   63  clear
+   64  ls
+   65  cd youtube-stats/
+   66  ls
+   67  docker build .
+   68  docker run 1a5af4b9aa25
+   69  cd
+   70  ls
+   71  docker run --rm -it -p 3000:3000/tcp youtube-stats
+   72  docker run --rm -it -p 3000:3000/tcp 1a5af4b9aa25
+   73  export NODE_OPTIONS=--openssl-legacy-provider
+   74  cd youtube-stats/
+   75  export NODE_OPTIONS=--openssl-legacy-provider
+   76  docker run --rm -it -p 3000:3000/tcp 1a5af4b9aa25
+   77  ls
+   78  cd ..
+   79  ls
+   80  cd dockeradmin/
+   81  ls
+   82  git clone git@gitlab.com:nanuchi/techworld-js-docker-demo-app.git
+   83  git clone https://gitlab.com/nanuchi/techworld-js-docker-demo-app.git
+   84  ls
+   85  cd techworld-js-docker-demo-app/
+   86  ls
+   87  cd ..
+   88  ls
+   89  docker pull mongo
+   90  docker ps
+   91  docker ps-a
+   92  docker ps -a
+   93  docker images
+   94  docker network ls
+   95  docker network create mongo-network
+   96  docker run mongo
+   97  docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e  MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo
+   98  docker run -d  -p 27017:27017-e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo
+   99  cd /var/lib/docker
+  100  sudo cd /var/lib/docker
+  101  exi
+  102  exit
+  103  ls -la /var/lib/docker
+  104  sudo ls -la /var/lib/docker
+  105  cd
+  106  ls
+  107  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 085781150237.dkr.ecr.us-east-1.amazonaws.com
+  108  sudo apt  install awscli
+  109  sudo snap install aws-cli
+  110  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 085781150237.dkr.ecr.us-east-1.amazonaws.com
+  111  aws configure
+  112  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 085781150237.dkr.ecr.us-east-1.amazonaws.com
+  113  docker build -t my-docker-repo .
+  114  ls
+  115  cd hello-docker/
+  116  docker build -t my-docker-repo .
+  117  docker tag my-docker-repo:latest 085781150237.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo:latest
+  118  docker push 085781150237.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo:latest
+  119  ls
+  120  cd ..
+  121  ls
+  122  cd dockeradmin/
+  123  ls
+  124  rm techworld-js-docker-demo-app/ docker-js-app
+  125  mv techworld-js-docker-demo-app/ docker-js-app
+  126  ls
+  127  cd youtube-stats/
+  128  ls
+  129  cat Dockerfile
+  130  ls
+  131  docker build .
+  132  docker run 1a5af4b9aa25
+  133  docker run 1a5af4b9aa25 --ip
+  134  docker run --ip
+  135  docker run --name mynginx1 -p 80:80 -d nginx
+  136  docker images
+  137  docker run 12766a6745ee
+  138  docker ps
+  139  docker stop mongodb
+  140  docker ps
+  141  docker stop nginx
+  142  docker stop nginx1
+  143  docker run 12766a6745ee
+  144  docker run --name mynginx1 -p 80:80 -d nginx
+  145  docker run --name mynginx1 -p 3000:80 -d nginx
+  146  docker stop  mynginx1
+  147  docker ps
+  148  docker run --name mynginx1 -p 3000:80 -d nginx
+  149  docker stop -t mynginx1
+  150  docker stop
+  151  docker stop -t mynginx1docker ps
+  152  docker ps
+  153  docker ps -a
+  154  docker stop f23fbfd9e5e8
+  155  docker ps
+  156  docker run --name mynginx1 -p 3000:80 -d nginx
+  157  docker run --name mynginx2 -p 3000:80 -d nginx
+  158  docker restart mynginx2
+  159  docker images
+  160  docker run .
+  161  docker run --help[
+  162  docker run --help
+  163  docker images
+  164  docker run -d 1a5af4b9aa25
+  165  docker run 1a5af4b9aa25
+  166  cat docker-compose.yaml
+  167  mkdir -p auth data
+  168  auth/nginx.conf
+  169  cd auth
+  170  ls
+  171  nano nginx.conf
+  172  nano auth/nginx.htpasswd
+  173  ls
+  174  cd ..
+  175  nano auth/nginx.htpasswd
+  176  cp domain.crt auth
+  177  ls
+  178  cd ..
+  179  docker images
+  180  docker image rm *
+  181  docker image rm .
+  182  docker image rm 1a5af4b9aa25
+  183  docker image rm 1a5af4b9aa25 -f
+  184  docker images
+  185  docker image rm 8231ac4ba49f -f
+  186  docker image rm b21ad2afe409 -f
+  187  docker image rm 2e200967d166 -f
+  188  docker image rm dca41997cda4 -f
+  189  docker image rm 20c0a0be5115 -f
+  190  docker image rm 12766a6745ee -f
+  191  docker stop 12766a6745ee
+  192  docker stop f1285184ce12
+  193  docker image rm 12766a6745ee -f
+  194  docker images
+  195  docker container ls
+  196  clear
+  197  sudo service docker start
+  198  sudo service docker status
+  199  sudo usermod -a -G docker dockeradmin
+  200  sudo usermod -a -G dockeradmin dockeradmin
+  201  sudo usermod -a -G docker dockeradmin
+  202  docker info
+  203  ls
+  204  cd youtube-stats/
+  205  ls
+  206  pwd
+  207  nano Dockerfile
+  208  docker build . -t youtubereactapp
+  209  docker run --rm -it -p 80:3000/tcp youtubereactapp:latest
+  210  docker run --rm -it -p 3000:3000/tcp youtubereactapp:latest
+  211  ls
+  212  nano Dockerfile
+  213  docker build . -t youtubereactapp
+  214  docker run --rm -it -p 3000:3000/tcp youtubereactapp:latest
+  215  docker run --rm -it -p 80:3000/tcp youtubereactapp:latest
+  216  curl http://localhost:3000
+  217  docker run -d -p 80:80 --name nginx nginx
+  218  docker run --rm -it -p 80:3000/tcp youtubereactapp:latest
+  219  docker run --rm -it -p 3000:3000/tcp youtubereactapp:latest
+  220  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  221  sudo chmod -a -G dockeradmin:dockeradmin
+  222  sudo chmod -a -G dockeradmin dockeradmin
+  223  sudo usermod -a -G docker dockeradmin
+  224  sudo apt install docker.io -y
+  225  sudo service docker restart
+  226  docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  227  aws ecr get-login --no-include-email --region us-east-1
+  228  docker login -u AWS -p eyJwYXlsb2FkIjoiR0hiK2Y4QTJSN1ZwQ3Urc29qSSsrSFQ5a01lK0tvdS9yd0Nvb01BMlJZeW12SnRYRS9UeCtmckFrRUlteURGSEphV0l1R2xjY1BTeU5pQWp5OU1jRTFyRjlhRytzZzRTZFF1cWlvek5mUWk1Y2x3bi9XS3FnenJMVU5ua2Q2cDJQeGFlMDBINTI2K2lreFYrRUJLUzI1S21HbHpyVjYwMmpTVUVxOWN6YUJONFU5VDh3MnFuUm9oSThwdldXMkgrZ3JnRTQxbU1oTmlrNUxGdjg3TTM2RGpMUUFpM29Bcis5SlRmTW40UldBeWgra1JYT0JWbFFReFhoMCtDZ3RWeEJGb0l4aHpIRDJFb2N4cE1GcVBzZGdlOUtrNWdrcThqSThIN0E5WHBGazJ4RVlxUExjMENuUUhlajFLdzhUMlFiQ2J5MElMSFovOVlSa0NBSGNKYUEvanJIYzFnVnFySWJ2RU1hdWZoZ3h1TnF6OXhtdG1obDNhS2NydEU1TE02eXdkaVN6ZGZNdGd4QnFKSER2TDdIejVxS0JUUGR1SzBVdUlGMUdhREJpbExDSnhxY3hZQmdFZUtEc3I2Nkk4eTRLTkNqZEdpcW1XNXVHYm00MDBqSUdSVmdYVG1SU1pjdEJqR0cwcS9CZ1NRVVRQdWtpZTc4MXB4NjRFRHAreTlMWkVDYzAxWHh1QTNodlBId0pXMXo3QnY3bkl2cWVLMWFTWlVxM1JzNGFCa3VSWk5qcnJoWWIyRjdUQ3JWQUFGSE9Cb3pCeDQ3RUN1ZWN3RFgrcFlIazdTVnpUS3RTOWowVm9qRXhhT0FBdU5BTERNTGJyMjRWZVZXbkNueHNsZFRNMDhzK205ajRURG5FV1BCVUdYMUVvRmQ5WDhVMU9IVHhiWmI3bmZ2NFl1M0ZMejRWNGdmU05wZ084YUpocnlvSWZCUExYRjVYOTdSZVZJVDhaTjZOVmswKzRKY1lxdnFQYzBFeXV3cDBKNGFNaXk1OEt1MzkxUThPemE3UUQ0ZGVOakpUWHJITlBYQlJEb1ZidCs3N2F5cXRXeW9ab1J6aFI1NUhzWGVLTUVTdmhBVVYwRzBuK0FOeDV6UHRBTEZUcThkZ01LblplcGNPL1JSd0VWVzBvMmpsU1NrdmZGaGR2RjJDemZBN0xtbkRTY0JvNXV6RDBJTjFkYnJ3S0Y4VTlJVWhCTEtmTmVVa2RDQXJRYkRPdWJsckp1SmFOQmRmd1R2eXFKOXBjNDZHNXk2a2pzM1hOQVBJN0s4ZWtmdWpuMExrcm5tbXc2ZjVMc2Y4cHhPTmwzRm5jY1BDWSs2VVhsdFpPck1UR3ZSOU1KTEJwdUcyeDZnald6c0lnYnVxNWZ6Tm56azNHNkZRanVpLzhvcDZMKzlnQUc2NTZRdmc9PSIsImRhdGFrZXkiOiJBUUVCQUhod20wWWFJU0plUnRKbTVuMUc2dXFlZWtYdW9YWFBlNVVGY2U5UnE4LzE0d0FBQUg0d2ZBWUpLb1pJaHZjTkFRY0dvRzh3YlFJQkFEQm9CZ2txaGtpRzl3MEJCd0V3SGdZSllJWklBV1VEQkFFdU1CRUVEQnFoN3VBcjdtQTUyQml4bVFJQkVJQTd4UnFHRHBJcUZNM213ODhSZ1RpSmpyZTNvbVlUMmVWRWRpSFMvU0VtRlE5Qk9ZWkE4MUMvWGdCYmhoSWh1dDBZNW4xNUYwUG1kRDFQNE8wPSIsInZlcnNpb24iOiIyIiwidHlwZSI6IkRBVEFfS0VZIiwiZXhwaXJhdGlvbiI6MTY0OTg4ODU0Nn0= https://085781150237.dkr.ecr.us-east-1.amazonaws.com
+  229  docker build -t docker-youtube-app .
+  230  docker tag docker-youtube-app:latest public.ecr.aws/u4y6p7e7/docker-youtube-app:latest
+  231  docker push public.ecr.aws/u4y6p7e7/docker-youtube-app:latest
+  232  sudo docker push public.ecr.aws/u4y6p7e7/docker-youtube-app:latest
+  233  docker push public.ecr.aws/u4y6p7e7/docker-youtube-app:latest
+  234  docker login
+  235  docker push public.ecr.aws/u4y6p7e7/docker-youtube-app:latest
+  236  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 085781150237.dkr.ecr.us-east-1.amazonaws.com
+  237  docker build -t my-docker-repo .
+  238  docker tag my-docker-repo:latest 085781150237.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo:latest
+  239  docker push 085781150237.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo:latest
+  240  docker images
+  241  docker run 12766a6745ee
+  242  aws -version
+  243  aws --version
+  244  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 085781150237.dkr.ecr.us-east-1.amazonaws.com
+  245  docker images
+  246  docker rmi -f 085781150237.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo
+  247  docker rmi -f my-docker-repo
+  248  docker rmi -f public.ecr.aws/u4y6p7e7/docker-youtube-app
+  249  docker rmi -f docker-youtube-app
+  250  docker rmi -f  0fd226f787b1
+  251  docker rmi -f 0fd226f787b1
+  252  docker rmi -f node
+  253  docker rmi -f nginx
+  254  docker rmi -f <none>
+  255  docker images
+  256  docker rmi -f *
+  257  docker rmi -f youtubereactapp
+  258  docker rmi -f node
+  259  docker images
+  260  docker rmi -f 16-alpine3.12
+  261  docker rm -f 7ae9aa692723
+  262  docker rm -f node
+  263  docker image prune -a
+  264  docker container prune
+  265  docker containers
+  266  docker containers ps
+  267  docker container ps
+  268  docker run --name mynginx1 -p 80:80 -d nginx
+  269  docker ps
+  270  docker build . -t youtubrreactapp
+  271  docker build --rm . -t youtubrreactapp
+  272  docker run --rm -it 80:3000/ tcp youtubereactapp:latest
+  273  docker run --rm -it -p 80:3000/ tcp youtubereactapp:latest
+  274  docker login
+  275  docker run --rm -it -p 80:3000/ tcp youtubereactapp:latest
+  276  docker run --rm -it -p 80:3000/tcp youtubereactapp:latest
+  277  docker build --rm . -t youtubereactapp
+  278  docker run --rm -it -p 80:3000/tcp youtubereactapp:latest
+  279  docker run --rm -it -p 3000:80/tcp youtubereactapp:latest
+  280  history > history_yt-app
+  281  ls
+  282  docker run --rm -it -p 3000:3000/tcp youtubereactapp:latest
+  283  history > history_yt-app
+  284  docker images
+  285  docker rmi -f youtubereactapp
+  286  docker rmi -f nginx
+  287  docker images
+  288  cat history_yt-app
+  289  clear
+  290  docker run --rm -it -p 3000:3000/tcp youtubereactapp:latest
+  291  docker images
+  292  docker build --rm . -t youtubereactapp
+  293  docker rmi -f youtubrreactapp
+  294  docker images
+  295  docker run --rm -it -p 3000:3000/tcp youtubereactapp:latest
+  296  docker run --rm -it -p 3000:3000/tcp -d youtubereactapp:latest
+  297  clear
+  298  docker container ps
+  299  docker rm mynginx1 -f
+  300  docker container ps
+  301  docker run --rm -it -p 80:3000/tcp -d youtubereactapp:latest
+  302  docker container ps
+  303  docker rm ae3ea182c52b -f
+  304  history
+  305  cd ..
+  306  ls
+  307  cd dockeradmin/
+  308  history
+  309  ls
+  310  cd youtube-stats/
+  311  history
+  312  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  313  docker -v
+  314  aws configure
+  315  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  316  aws ecr get-login --region us-east-1
+  317  aws ecr --region <your-region> | docker login -u AWS -p eyJwYXlsb2FkIjoiNWxBQWJJU0xOVXJ6aWxtN3cvT2c0Q3JrcUlRQlB3citNNzJibnRhZlNZckQ4Y3lwdWE1cEZFQzRPQXRYbjUwN2diSXRxNjJod2luTXFwckRFUG1QcjBJUEZmOXhFdDk2N01RRFg0VE5iQ1Y5dDcwWGZaSndFa0pLelo4TUpPTk5ZTzVoam43NHZjeTAzR24zM3ptbmFuTFRidFZ3Q242bjFHWDhHYXF4KzVkcWpPR25oWlp1YjJ6Y3N4RnhTb2M3Y1IvWkZwdGZTY3JTeVdUZ25WUkpZemQ3NDdXb3QyR0lsMFdOV3RMQ3JYNVVmN25IK0RHRXlGMUpWa29yc3RvYmFoRWpTakY2d0NlTTBOQml5NE5WbEFvaFVxdm00Nkp0K0h5b04zNjl0dzArcjU4bmowamc4emVzYkMrdWdKVjlPdUUzR2V1cXA2SDlVQU1nZkprdHA5Wnd5bk5yNFBoUFZEdHNURWZMVy9Sb0pBSVNLS3B6ZGZhZEx5NFFTaGZFN1crSktObE9SZWZVanRYVzdUbjhDTlNSTFoxamVzMkNSUU9PMnhYcURvcjZobnVjenlSNGdINmk1cVgvaktFcmR4dE1DVE1Ma1owd0NCelBVS0k5bDhYNkpaUmxvZ0d5Rk1qaEVONEZncmlpblIvL2EySkkxZkhaMzB5OGFON0lvVmVPbTRVeVA0WGNGbk9sVXlIT2Vqd1EraTBzekVaOUQ4OHBuUFpvZCtNazRjamsyRmRUMEFkZ3ZTNkd6WmduUVU5TUJhbHg5WFVaTHZiZkF6RGNnN3g5cnNVamloTVhxWC9SNEx2Y05EVk52bEpESkR4U2YwNGNXaVpxOFUvaDZRaEs3M25zT3NxdzZsN1ZYZ0VicTBhVXpibEVwRXhyZ1RoQUI2L2lMUGFYSGp0TmhLTVdkM3VockNQeFVKZlVsNTh2anFGTG5yWnJGNEdYL1kydmVJNmZ5emtrQjVyL3VVZkhBOGNhbk5Uam1zTHlnalRuWTJKM0JLU2Z4eHNLQUVmTnJVZEVWZk8wM2w2RE9abjc1UnlGRm8xSzNoTHVTbEFSa1M2cGF1ZHRQeGRGM2RWK2hyWXBXd2pmMVJGWTFHUHc3VnVva0ZtZENVak9QV092LzFnaEpldW12eFU1UC9uTHdLcEFzSWJXZVF1RzI5T21yUjlYQ2VCcGJvcUVNa3FDQ0xicGZNdVpiWDNlTW9rdCtURkpDOFRMS1NXQ3YvTEMwVTNSbEJLb2p6U0twNElXSWRCSkZGbGhzWC9PUkpsRi80ZHgxYWFhMXFiNGY1Rm9yZWlBbVZ4Yi9SNGdRVU1iS052eU95YmJMS2VPQmlDV25wMlpmZ1ZtczlOM2JRbCttNmtCMjdoeDdES1pWSE0xUWFYcmh4bHhqdTFIUmc9PSIsImRhdGFrZXkiOiJBUUVCQUhod20wWWFJU0plUnRKbTVuMUc2dXFlZWtYdW9YWFBlNVVGY2U5UnE4LzE0d0FBQUg0d2ZBWUpLb1pJaHZjTkFRY0dvRzh3YlFJQkFEQm9CZ2txaGtpRzl3MEJCd0V3SGdZSllJWklBV1VEQkFFdU1CRUVESEdteXNPdUZQWlF3dElJUlFJQkVJQTdrdjRhdlR6NzJtMzZwTzErL2lvaDZCNjhSOUUweUFQMmhyMVFxMzVWVTA1eDBjMjk3a3ZES2NHeEpxS0YxYUVCdncyTXhJdjM5ZHVaSk1nPSIsInZlcnNpb24iOiIyIiwidHlwZSI6IkRBVEFfS0VZIiwiZXhwaXJhdGlvbiI6MTY0OTg4NzMyNH0= -e none https://085781150237.dkr.ecr.us-east-1.amazonaws.com
+  318  aws ecr --region <your-region> | docker login -u AWS -p eyJwYXlsb2FkIjoiNWxBQWJJU0xOVXJ6aWxtN3cvT2c0Q3JrcUlRQlB3citNNzJibnRhZlNZckQ4Y3lwdWE1cEZFQzRPQXRYbjUwN2diSXRxNjJod2luTXFwckRFUG1QcjBJUEZmOXhFdDk2N01RRFg0VE5iQ1Y5dDcwWGZaSndFa0pLelo4TUpPTk5ZTzVoam43NHZjeTAzR24zM3ptbmFuTFRidFZ3Q242bjFHWDhHYXF4KzVkcWpPR25oWlp1YjJ6Y3N4RnhTb2M3Y1IvWkZwdGZTY3JTeVdUZ25WUkpZemQ3NDdXb3QyR0lsMFdOV3RMQ3JYNVVmN25IK0RHRXlGMUpWa29yc3RvYmFoRWpTakY2d0NlTTBOQml5NE5WbEFvaFVxdm00Nkp0K0h5b04zNjl0dzArcjU4bmowamc4emVzYkMrdWdKVjlPdUUzR2V1cXA2SDlVQU1nZkprdHA5Wnd5bk5yNFBoUFZEdHNURWZMVy9Sb0pBSVNLS3B6ZGZhZEx5NFFTaGZFN1crSktObE9SZWZVanRYVzdUbjhDTlNSTFoxamVzMkNSUU9PMnhYcURvcjZobnVjenlSNGdINmk1cVgvaktFcmR4dE1DVE1Ma1owd0NCelBVS0k5bDhYNkpaUmxvZ0d5Rk1qaEVONEZncmlpblIvL2EySkkxZkhaMzB5OGFON0lvVmVPbTRVeVA0WGNGbk9sVXlIT2Vqd1EraTBzekVaOUQ4OHBuUFpvZCtNazRjamsyRmRUMEFkZ3ZTNkd6WmduUVU5TUJhbHg5WFVaTHZiZkF6RGNnN3g5cnNVamloTVhxWC9SNEx2Y05EVk52bEpESkR4U2YwNGNXaVpxOFUvaDZRaEs3M25zT3NxdzZsN1ZYZ0VicTBhVXpibEVwRXhyZ1RoQUI2L2lMUGFYSGp0TmhLTVdkM3VockNQeFVKZlVsNTh2anFGTG5yWnJGNEdYL1kydmVJNmZ5emtrQjVyL3VVZkhBOGNhbk5Uam1zTHlnalRuWTJKM0JLU2Z4eHNLQUVmTnJVZEVWZk8wM2w2RE9abjc1UnlGRm8xSzNoTHVTbEFSa1M2cGF1ZHRQeGRGM2RWK2hyWXBXd2pmMVJGWTFHUHc3VnVva0ZtZENVak9QV092LzFnaEpldW12eFU1UC9uTHdLcEFzSWJXZVF1RzI5T21yUjlYQ2VCcGJvcUVNa3FDQ0xicGZNdVpiWDNlTW9rdCtURkpDOFRMS1NXQ3YvTEMwVTNSbEJLb2p6U0twNElXSWRCSkZGbGhzWC9PUkpsRi80ZHgxYWFhMXFiNGY1Rm9yZWlBbVZ4Yi9SNGdRVU1iS052eU95YmJMS2VPQmlDV25wMlpmZ1ZtczlOM2JRbCttNmtCMjdoeDdES1pWSE0xUWFYcmh4bHhqdTFIUmc9PSIsImRhdGFrZXkiOiJBUUVCQUhod20wWWFJU0plUnRKbTVuMUc2dXFlZWtYdW9YWFBlNVVGY2U5UnE4LzE0d0FBQUg0d2ZBWUpLb1pJaHZjTkFRY0dvRzh3YlFJQkFEQm9CZ2txaGtpRzl3MEJCd0V3SGdZSllJWklBV1VEQkFFdU1CRUVESEdteXNPdUZQWlF3dElJUlFJQkVJQTdrdjRhdlR6NzJtMzZwTzErL2lvaDZCNjhSOUUweUFQMmhyMVFxMzVWVTA1eDBjMjk3a3ZES2NHeEpxS0YxYUVCdncyTXhJdjM5ZHVaSk1nPSIsInZlcnNpb24iOiIyIiwidHlwZSI6IkRBVEFfS0VZIiwiZXhwaXJhdGlvbiI6MTY0OTg4NzMyNH0= -e none https://085781150237.dkr.ecr.us-east-1.amazonaws.com/docker-youtube-app
+  319  aws ecr --region us-east-1 | docker login -u AWS -p eyJwYXlsb2FkIjoiNWxBQWJJU0xOVXJ6aWxtN3cvT2c0Q3JrcUlRQlB3citNNzJibnRhZlNZckQ4Y3lwdWE1cEZFQzRPQXRYbjUwN2diSXRxNjJod2luTXFwckRFUG1QcjBJUEZmOXhFdDk2N01RRFg0VE5iQ1Y5dDcwWGZaSndFa0pLelo4TUpPTk5ZTzVoam43NHZjeTAzR24zM3ptbmFuTFRidFZ3Q242bjFHWDhHYXF4KzVkcWpPR25oWlp1YjJ6Y3N4RnhTb2M3Y1IvWkZwdGZTY3JTeVdUZ25WUkpZemQ3NDdXb3QyR0lsMFdOV3RMQ3JYNVVmN25IK0RHRXlGMUpWa29yc3RvYmFoRWpTakY2d0NlTTBOQml5NE5WbEFvaFVxdm00Nkp0K0h5b04zNjl0dzArcjU4bmowamc4emVzYkMrdWdKVjlPdUUzR2V1cXA2SDlVQU1nZkprdHA5Wnd5bk5yNFBoUFZEdHNURWZMVy9Sb0pBSVNLS3B6ZGZhZEx5NFFTaGZFN1crSktObE9SZWZVanRYVzdUbjhDTlNSTFoxamVzMkNSUU9PMnhYcURvcjZobnVjenlSNGdINmk1cVgvaktFcmR4dE1DVE1Ma1owd0NCelBVS0k5bDhYNkpaUmxvZ0d5Rk1qaEVONEZncmlpblIvL2EySkkxZkhaMzB5OGFON0lvVmVPbTRVeVA0WGNGbk9sVXlIT2Vqd1EraTBzekVaOUQ4OHBuUFpvZCtNazRjamsyRmRUMEFkZ3ZTNkd6WmduUVU5TUJhbHg5WFVaTHZiZkF6RGNnN3g5cnNVamloTVhxWC9SNEx2Y05EVk52bEpESkR4U2YwNGNXaVpxOFUvaDZRaEs3M25zT3NxdzZsN1ZYZ0VicTBhVXpibEVwRXhyZ1RoQUI2L2lMUGFYSGp0TmhLTVdkM3VockNQeFVKZlVsNTh2anFGTG5yWnJGNEdYL1kydmVJNmZ5emtrQjVyL3VVZkhBOGNhbk5Uam1zTHlnalRuWTJKM0JLU2Z4eHNLQUVmTnJVZEVWZk8wM2w2RE9abjc1UnlGRm8xSzNoTHVTbEFSa1M2cGF1ZHRQeGRGM2RWK2hyWXBXd2pmMVJGWTFHUHc3VnVva0ZtZENVak9QV092LzFnaEpldW12eFU1UC9uTHdLcEFzSWJXZVF1RzI5T21yUjlYQ2VCcGJvcUVNa3FDQ0xicGZNdVpiWDNlTW9rdCtURkpDOFRMS1NXQ3YvTEMwVTNSbEJLb2p6U0twNElXSWRCSkZGbGhzWC9PUkpsRi80ZHgxYWFhMXFiNGY1Rm9yZWlBbVZ4Yi9SNGdRVU1iS052eU95YmJMS2VPQmlDV25wMlpmZ1ZtczlOM2JRbCttNmtCMjdoeDdES1pWSE0xUWFYcmh4bHhqdTFIUmc9PSIsImRhdGFrZXkiOiJBUUVCQUhod20wWWFJU0plUnRKbTVuMUc2dXFlZWtYdW9YWFBlNVVGY2U5UnE4LzE0d0FBQUg0d2ZBWUpLb1pJaHZjTkFRY0dvRzh3YlFJQkFEQm9CZ2txaGtpRzl3MEJCd0V3SGdZSllJWklBV1VEQkFFdU1CRUVESEdteXNPdUZQWlF3dElJUlFJQkVJQTdrdjRhdlR6NzJtMzZwTzErL2lvaDZCNjhSOUUweUFQMmhyMVFxMzVWVTA1eDBjMjk3a3ZES2NHeEpxS0YxYUVCdncyTXhJdjM5ZHVaSk1nPSIsInZlcnNpb24iOiIyIiwidHlwZSI6IkRBVEFfS0VZIiwiZXhwaXJhdGlvbiI6MTY0OTg4NzMyNH0= -e none https://085781150237.dkr.ecr.us-east-1.amazonaws.com/docker-youtube-app
+  320  clear
+  321  sudo su
+  322  cd
+  323  ls
+  324  cd youtube-stats/
+  325  ls
+  326  history > history_yt-app
+  327  ls
+  328  cat history_yt-app
+  329  rm history_yt-app
+  330  ls
+  331  cd auth/
+  332  ls
+  333  cd ..
+  334  rm -rf auth data
+  335  ls
+  336  clear
+  337  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  338  docker login
+  339  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  340  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  341  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  342  cd
+  343  ls
+  344  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  345  docker images
+  346  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ecr.aws/u4y6p7e7
+  347  aws ecr.public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  348  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  349  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  350  unzip awscliv2.zip
+  351  sudo apt install unzip
+  352  sudo ./aws/install
+  353  sudo apt install unzip
+  354  sudo ./aws/install
+  355  ls
+  356  unzip awscliv2.zip
+  357  sudo ./aws/install
+  358  ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
+  359  aws --version
+  360  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  361  clear
+  362  docker images
+  363  docker tag youtubereactapp:latest public.ecr.aws/u4y6p7e7/docker-youtube-app:latest
+  364  docker push public.ecr.aws/u4y6p7e7/docker-youtube-app:latest
+  365  clear
+  366  docker container
+  367  docker container ps
+  368  docker images
+  369  docker image rm public.ecr.aws/u4y6p7e7/docker-youtube-app -f
+  370  docker images
+  371  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  372  docker tag youtubereactapp:latest public.ecr.aws/u4y6p7e7/youtubereactapp:latest
+  373  docker push public.ecr.aws/u4y6p7e7/youtubereactapp:latest
+  374  docker push public.ecr.aws/u4y6p7e7/docker-youtube-app:latest
+  375  docker push public.ecr.aws/u4y6p7e7/youtubereactapp:latest
+  376  docker images
+  377  docker image rm public.ecr.aws/u4y6p7e7/youtubereactapp -f
+  378  docker images
+  379  ls
+  380  cd ..
+  381  ls
+  382  cd
+  383  ls
+  384  rm awscliv2.zip
+  385  ls
+  386  cd aws
+  387  ls
+  388  cd ..
+  389  rm -rf aws
+  390  ls
+  391  docker images
+  392  docker container ps
+  393  docker rm  youtubereactapp:latest -f
+  394  docker rm 555872bbe32c -f
+  395  docker images
+  396  ls
+  397  cd
+  398  ls
+  399  git clone https://github.com/AkashBG3010/NodeJs-API.git
+  400  clear
+  401  ls
+  402  cd NodeJs-API/
+  403  ls
+  404  ll
+  405  nano Dockerfile
+  406  docker build . -t NodeJs-API
+  407  ls
+  408  cd ..
+  409  ls
+  410  mv NodeJs-API/ nodejs-hello-world
+  411  cd youtube-stats/
+  412  ls
+  413  cd ..
+  414  ls
+  415  cd nodejs-hello-world/
+  416  docker build . -t nodejs-helloworld
+  417  ocker run --rm -it -p 80:3000/tcp nodejs-helloworld:latest
+  418  docker run --rm -it -p 80:3000/tcp nodejs-helloworld:latest
+  419  docker run -d  --name nodejs-mongo mongo:latest
+  420  docker run --rm -it -p 80:3000/tcp nodejs-helloworld:latest
+  421  touch docker-compose.yml
+  422  nano Dockerfile
+  423  docker network ls
+  424  nano .env
+  425  docker containers ps
+  426  docker container ps
+  427  docker run -d -p 27017:27017 --name nodejs-mongo mongo:latest
+  428  docker run -d -p 27017:27017 --name nodejs-mongodb mongodb:latest
+  429  docker container ps
+  430  docker rm b43b7e922d3e
+  431  docker rm b43b7e922d3e -f
+  432  docker container ps
+  433  docker run -d -p 27017:27017 --name nodejs-mongodb mongodb:latest
+  434  docker login
+  435  docker run -d -p 27017:27017 --name nodejs-mongo mongo:latest
+  436  docker container ps
+  437  docker run --rm -it -d -p 80:3000/tcp nodejs-helloworld:latest
+  438  docker container ps
+  439  docker build . -t nodejs-helloworld
+  440  docker images
+  441  docker container ps
+  442  docker images
+  443  docker image rm nodejs-helloworld
+  444  docker image rm nodejs-helloworld -f
+  445  docker image rm node -f
+  446  docker image rm mongo -f
+  447  docker image rm node -f
+  448  docker images
+  449  docker image rm 2c74845912ff -f
+  450  docker images
+  451  docker image rm 08a31612ddb0 -f
+  452  docker container ps
+  453  docker rm
+  454  docker rm efff978c3d41 -f
+  455  docker rm 0e6d8c990000 -f
+  456  docker container ps
+  457  docker images
+  458  docker image rm  -f
+  459  docker image rm 08a31612ddb0 -f
+  460  docker image rm 05845d17681b -f
+  461  docker image rm ff748fa0ddfa -f
+  462  docker image rm b21ad2afe409 -f
+  463  docker image rm 12766a6745ee -f
+  464  docker image rm 7ae9aa692723 -f
+  465  clear
+  466  docker images
+  467  docker container ps
+  468  docker container ps -a
+  469  ll
+  470  rm docker-compose.yml
+  471  ll
+  472  cd ..
+  473  ll
+  474  cd youtube-stats/
+  475  ll
+  476  docker pull public.ecr.aws/u4y6p7e7/youtubereactapp:latest
+  477  docker login
+  478  docker pull public.ecr.aws/u4y6p7e7/youtubereactapp:latest
+  479  aws ecr describe-repositories
+  480  aws ecr describe-images
+  481  docker pull public.ecr.aws/u4y6p7e7/youtubereactapp:latest
+  482  docker pull sha256:265ae634ff43a7c8f97344e69e046d38f19be360b596091f7a4a7af5ac137d39
+  483  ls
+  484  ls
+  485  cd
+  486  ls
+  487  cd nodejs-hello-world/
+  488  ls
+  489  nano .dockerignore
+  490  nano docker-compose.yml
+  491  docker run -d -p 27017:27017 --name mongo mongo
+  492  docker ps
+  493  ls
+  494  rm docker-compose.yml
+  495  ls
+  496  nano .env
+  497  docker build . -t nodejs
+  498  nano Dockerfile
+  499  docker build . -t nodejs
+  500  docker ps
+  501  docker run --rm -it -p 80:3000 nodejs:latest
+  502  docker ps
+  503  nano .env
+  504  docker run --rm -it -p 80:3000 nodejs:latest
+  505  nano .env
+  506  docker run -d --link mongo:mongo nodejs:latest
+  507  docker run --rm -it -p 80:3000 nodejs:latest
+  508  docker ps
+  509  docker rm nonodejs:latest
+  510  docker rm 25a4601d9049 -f
+  511  docker rm c035b188a758 -f
+  512  docker ps
+  513  docker images
+  514  docker rm nodejs
+  515  docker images rm nodejs
+  516  docker image rm nodejs
+  517  docker image rm node
+  518  docker images
+  519  docker image rm node -f
+  520  docker image rm ff748fa0ddfa -f
+  521  docker image rm mongo -f
+  522  docker images
+  523  clear
+  524  ls
+  525  ll
+  526  nano docker-compose.yml
+  527  docker-compose build
+  528  docker docker-compose build
+  529  docker -compose build
+  530  docker login
+  531  docker-compose up
+  532  sudo apt  install docker-compose
+  533  docker-compose up
+  534  nano docker-compose.yml
+  535  docker-compose up
+  536  nano .env
+  537  docker-compose up
+  538  nano .env
+  539  docker-compose up
+  540  nano .env
+  541  docker-compose up
+  542  nano .env
+  543  docker-compose up
+  544  docker network create myNetwork
+  545  docker network connect myNetwork nodejs
+  546  docker network connect myNetwork mongo
+  547  docker network inspect myNetwork
+  548  docker exec -ti nodejs ping mongo
+  549  cd
+  550  ls
+  551  cd nodejs-hello-world/
+  552  ls
+  553  docker network create myNetwork
+  554  docker network ls
+  555  docker network inspect bridge
+  556  docker network inspect host
+  557  docker network inspect mongo-network
+  558  docker network inspect myNetwork
+  559  docker network inspect nodejs-hello-world_default
+  560  docker-compose up
+  561  nano .env
+  562  docker-compose up
+  563  nano .env
+  564  docker-compose up
+  565  nano .env
+  566  docker ps
+  567  docker images ps
+  568  docker container ps
+  569  docker images ps -a
+  570  docker container ps -a
+  571  docker exec -it mongo /bin/bash
+  572  docker exec -it mongo
+  573  docker start mongo
+  574  docker container ps
+  575  nano .env
+  576  docker-compose up
+  577  nano .env
+  578  ping mongodb://mongo:27017/demo
+  579  docker info
+  580  docker images
+  581  docker network ls
+  582  udo apt-get install bridge-utils
+  583  sudo apt-get install bridge-utils
+  584  brctl show
+  585  ip a
+  586  docker ps
+  587  docker network inspect bridge
+  588  docker run -d --link mongo:mongo nodejs
+  589  docker run -d mongo nodejs
+  590  docker ps
+  591  docker start mongo
+  592  docker ps
+  593  docker start nodejs
+  594  docker ps
+  595  docker run -d --link mongo:mongo nodejs
+  596  docker login
+  597  docker run -d --link mongo:mongo nodejs
+  598  docker-compose up
+  599  docker ps
+  600  docker images ps
+  601  docker images
+  602  docker run -d --link mongo:mongo nodejs-hello-world_app
+  603  docker images
+  604  docker ps
+  605  docker images
+  606  clear
+  607  cd ..
+  608  ls
+  609  cd docker-js-app/
+  610  ls
+  611  nano Dockerfile
+  612  nano docker-compose.yaml
+  613  docker-compose up
+  614  clear
+  615  ls
+  616  cd ..
+  617  ls
+  618  rm -rf docker-js-app
+  619  ls
+  620  clear
+  621  ll
+  622  ls
+  623  cd hello-docker/
+  624  ls
+  625  cd
+  626  ls
+  627  history
+  628  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  629  docker build -t my-docker-repo .
+  630  docker images
+  631  docker build -t nodejs-hello-world_app .
+  632  docker push public.ecr.aws/u4y6p7e7/my-docker-repo:latest
+  633  docker push public.ecr.aws/u4y6p7e7/nodejs-hello-world_app
+  634  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u4y6p7e7
+  635  docker tag nodejs-hello-world_app:latest public.ecr.aws/u4y6p7e7/nodejs-hello-world_app:latest
+  636  docker push public.ecr.aws/u4y6p7e7/nodejs-hello-world_app:latest
+  637  clear
+  638  exit
+  639  cd
+  640  ls
+  641  cd nodejs-hello-world/
+  642  ls
+  643  nano Dockerfile
+  644  docker container ps
+  645  history
+  646  exit
+  647  cd
+  648  clear
+  649  sudo docker commit deddd39fa163 ubuntu-nmap
+  747  docker volume
+  748  docker volume nginx-vol
+  749  docker volume create nginx-vol
+  750  docker volume ls
+  751  docker volume ls
+  773  docker volume inspect nginx-vol
+  774  docker run -d   --name nginx   --mount source=nginx-vol,target=/app \
+  804  docker run -it ubuntu bash
+  806  docker ps
+  807  sudo docker run -it ubuntu bash
+       root@2165156465~/#: apt update
+       root@2165156465~/#: apt upgrade
+       root@2165156465~/#: apt install mongod
+       root@2165156465~/#: apt nginx
+       root@2165156465~/#: apt nodejs
+       root@2165156465~/#: apt npm
+  808  docker ps
+  809  sudo docker commit 480cc08c6ce7 nginx	
+  810  docker pull nginx
+  811  docker pull mongo
+  812  docker pull nodejs
+  813  docker pull npm
+  814  docker run -it --name nginx -d nginx:latest
+  815  docker run -it --name nodejs --link nginx -d mongo
+  816  sudo docker run -it mongo bash
+       root@2165156465~/#: apt update
+       root@2165156465~/#: apt upgrade
+       root@2165156465~/#: apt install ping
+       root@2165156465~/#: apt install iputils-ping
+       root@2165156465~/#: ping nginx
+  817  sudo docker run -it nginx bash
+       root@2165156465~/#: apt update
+       root@2165156465~/#: apt upgrade
+       root@2165156465~/#: apt install ping
+       root@2165156465~/#: apt install iputils-ping
+       root@2165156465~/#: ping mongo
+  818  sudo docker run -it --memory="500m" ubuntu
+  819  sudo docker run -it --memory="1g" --memory-reservation="750m" ubuntu
+  820  sudo docker run -it --cpus="1.0" ubuntu
+  821  sudo docker run -it --cpus-shares="700" ubuntu
+   822  docker rmi 825d55fb6340 -f
+  823  clear
+  824  history
+  825  clear
+  826  docker pull mongo
+  827  docker imagees
+  828  docker images
+  829  docker rmi b21ad2afe409
+  830  ls
+  831  docker images
+  832  docker ps
+  833  docker ps -a
+  834  docker rm c2fb392cd6e1
+  835  docker rm 260604acb633
+  836  docker rm
+  837  docker rm 8467816e82e1
+  838  docker rm 48f1464fd86a
+  839  docker ps -a
+  840  docker ps
+  841  docker images
+  842  clear
+  843  cat /etc/hosts
+  844  clear
+  845  ls
+  846  cd
+  847  ls
+  848  mkdir myapp
+  849  cd myapp
+  850  vi docker-compose.yml
+  851  docker-compose up -d
+  852  vi docker-compose.yml
+  853  nano docker-compose.yml
+  854  docker-compose up -d
+  855  nano docker-compose.yml
+  856  docker-compose up -d
+  857  clear
+  858  docker pull hello-world
+  859  docker images
+  860  docker run -d -p 80:80 --name hello-world hello-world:latest
+  861  ls
+  862  cd ..
+  863  ls
+  864  cd nodejs-hello-world/
+  865  ls
+  866  docker-compose up -d
+  867  docker ps
+  868  docker images
+  869  docker rmi hello-world -f
+  870  docker rmi mongo -f
+  871  docker rmi node -f
+  872  docker rmi nodejs-hello-world_app -f
+  873  docker ps
+  874  docker rm b4264debe549 -f
+  875  docker rm dd2913c32f33 -f
+  876  docker ps
+  877  docker images
+  878  docker rmi  -f
+  879  docker rmi 0c937364b7b8 -f
+  880  docker rmi ff748fa0ddfa -f
+  881  docker rmi b21ad2afe409 -f
+  882  docker images
+  883  clear
+  884  cd ..
+  885  tutum/hello-world
+  886  docker pull tutum/hello-world
+  887  docker images
+  888  docker rmi tutum/hello-world
+  889  docker images
+  890  clear
+  891  ls
+  892  cd myapp/
+  893  ls
+  894  nano docker-compose.yml
+  895  docker-compose up -d
+  896  docker images
+  897  docker ps
+  898  nano docker-compose.yml
+  899  docker rmi tutum/hello-world
+  900  docker rmi tutum/hello-world -f
+  901  docker rmi 73d0519c9a45 -f
+  902  docker ps
+  903  docker rm 73d0519c9a45 -f
+  904  docker ps
+  905  docker images
+  906  docker rmi 31e17b0746e4 -f
+  907  docker images
+  908  docker ps
+  909  clear
+  910  ls
+  911  nano nginx.conf
+  912  nano Dockerfile
+  913  nano file2.yml
+  914  ls
+  915  nano docker-compose.yml
+  916  nano file2.yml
+  917  nano nginx.conf
+  918  clear
+  919  ls
+  920  cat file2.yml
+  921  cat Dockerfile
+  922  history
+  923  docker-compose -f file2.yml up -d --scale myapp=2

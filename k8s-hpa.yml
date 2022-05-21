@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Nodejs-app
+spec:
+  selector:
+    matchLabels:
+      run: Nodejs-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: Nodejs-app
+    spec:
+      containers:
+      - name: Nodejs-app
+        image: akashbg3010/nodejs-api_app
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: Nodejs-app
+  labels:
+    run: Nodejs-app
+spec:
+  ports:
+  - port: 80
+  selector:
+    run: Nodejs-app
